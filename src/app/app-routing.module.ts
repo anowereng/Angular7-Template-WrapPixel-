@@ -1,0 +1,19 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+//import { ListEmployeeComponent } from 'src/app/employee/list-employee/list-employee.component';
+
+const routes: Routes = [
+  { path: ' ', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component:DashboardComponent  },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule { }
+export const routingComponents = [DashboardComponent]
+
+
